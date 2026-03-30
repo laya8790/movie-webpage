@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Hub</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #000;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #f8f9fa;
+    }
+
+    /* Carousel */
+    .carousel-item img {
+  height: 450px;
+  width: 100%;
+  object-fit: contain;
+  background-color: #ffffff;
+}
+
+
+
+
+    /* Movie Cards */
+    .movie-card img {
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .movie-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .movie-card {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    .rating {
+      color: #f4c430;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      padding: 15px;
+      text-align: center;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">MovieHub</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#telugu">Telugu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#hindi">Hindi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#english">English</a></li>
+      </ul>
+
+      <input class="form-control w-25" type="search" placeholder="Search movies...">
+    </div>
+  </div>
+</nav>
+
+<div id="movieSlider" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <!-- Telugu -->
+    <div class="carousel-item active">
+      <img src="https://i0.wp.com/saichintala.com/wp-content/uploads/2017/05/maxresdefault.jpg?fit=1200%2C675&ssl=1">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://assets-in.bmscdn.com/discovery-catalog/events/et00054544-fvejcvnsez-landscape.jpg">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://data1.ibtimes.co.in/en/full/712804/nani-movie-jersey-poster.jpg?h=450&l=50&t=40">
+    </div>
+
+    <!-- Hindi -->
+    <div class="carousel-item">
+      <img src="https://m.media-amazon.com/images/M/MV5BYmU0NjVlM2UtNGUyMy00MjQ5LWE1YmYtMTE5ODBlYzQ3NGExXkEyXkFqcGc@._V1_.jpg">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://stat5.bollywoodhungama.in/wp-content/uploads/2016/03/56269401.jpg">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://stat4.bollywoodhungama.in/wp-content/uploads/2016/03/79974432.jpg">
+    </div>
+
+    <!-- English -->
+    <div class="carousel-item">
+      <img src="https://i.ytimg.com/vi/FK1a4GsfNtA/maxresdefault.jpg">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://wallpapercave.com/wp/wp4496006.jpg">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://images4.alphacoders.com/140/thumb-1920-1405485.jpg">
+    </div>
+  <!-- Left Arrow -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#movieSlider" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <!-- Right Arrow -->
+  <button class="carousel-control-next" type="button" data-bs-target="#movieSlider" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+
+<!-- MOVIE GRID TEMPLATE -->
+<div class="container mt-5">
+
+  <!-- TELUGU -->
+  <h2 id="telugu">Telugu Movies</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card movie-card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2SCl0jsSs11NtzEmSzDIeS3eQkS5i5A6C_ZcnTzr53SywhjNejNwKsf2w3a0s_dsYtfVXBt8JWZ55D7eFKsOef1LRV0wcAHSmZGApb4-UyJnlZc_dBDxvjAbqIrJByJ3iMfpze3WXq80/s1600/a-still-of-anushka-shetty-and-prabhas-from-the-trailer-of-baahubali-the-conclusion.jpg">
+        <div class="card-body">
+          <h5>Baahubali 2</h5>
+          <p class="rating">★★★★☆ (4.7)</p>
+          <button class="btn btn-outline-dark" onclick="showDesc('Baahubali 2','Epic historical action film.')">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card movie-card">
+        <img src="https://miro.medium.com/1*5kqzZFLkcaBsFyI2RoN21g.jpeg">
+        <div class="card-body">
+          <h5>Mahanati</h5>
+          <p class="rating">★★★★★ (4.8)</p>
+          <button class="btn btn-outline-dark" onclick="showDesc('Mahanati','Biopic of legendary actress Savitri.')">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card movie-card">
+        <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/jersey-et00077973-19-06-2018-02-57-43.jpg">
+        <div class="card-body">
+          <h5>Jersey</h5>
+          <p class="rating">★★★★☆ (4.5)</p>
+          <button class="btn btn-outline-dark" onclick="showDesc('Jersey','Father re-enters cricket for his son.')">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HINDI -->
+  <h2 class="mt-5" id="hindi">Hindi Movies</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card movie-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/1/17/Zindagi_Na_Milegi_Dobara.jpg">
+        <div class="card-body">
+          <h5>Zindagi Na Milegi Dobara</h5>
+          <p class="rating">★★★★★ (4.8)</p>
+          <button class="btn btn-outline-dark" onclick="showDesc('ZNMD','Friendship and self-discovery.')">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card movie-card">
+        <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9462579_p_v10_ab.jpg">
+        <div class="card-body">
+          <h5>English Vinglish</h5>
+          <p class="rating">★★★★☆ (4.6)</p>
+          <button class="btn btn-outline-dark" onclick="showDesc('English Vinglish','Empowering family drama.')">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card movie-card">
+        <img src="https://m.media-amazon.com/images/I/810cJGXnk0L._AC_UF1000,1000_QL80_.jpg">
+        <div class="card-body">
+          <h5>Queen</h5>
+          <p class="rating">★★★★☆ (4.7)</p>
+          <button class="btn btn-outline-dark" onclick="showDesc('Queen','Solo journey of self-confidence.')">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENGLISH -->
+  <h2 class="mt-5" id="english">English Movies</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card movie-card">
+        <img src="https://m.media-amazon.com/images/M/MV5BY2IyZTVkOWMtOTJjZS00NzM2LWFmYTgtM2NlMjhkY2E5NWZjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+        <div class="card-body">
+          <h5>Draculla</h5>
+          <p class="rating">★★★★☆ (4.5)</p>
+          <button class="btn btn-outline-dark" onclick="showDesc('Aprince waits 300 years to reunite with his lost princess','Gothic Horror.')">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card movie-card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTQwYmRhNGQtODI2Mi00ZTRlLTk0Y2QtY2NkNjE1MGNhNTgwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+        <div class="card-body">
+          <h5>10 Things I Hate About You</h5>
+          <p class="rating">★★★★☆ (4.4)</p>
+          <button class="btn btn-outline-dark" onclick="showDesc('A bet that brings the main leads to fall in love with each other','Romantic comedy.')">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card movie-card">
+        <img src="https://m.media-amazon.com/images/I/71nANm2l5sL._AC_UF1000,1000_QL80_.jpg">
+        <div class="card-body">
+          <h5>Frankestine</h5>
+          <p class="rating">★★★★★ (4.9)</p>
+          <button class="btn btn-outline-dark" onclick="showDesc('A mad scientinst creates a monster','Goth story.')">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  B.Khyathi Sree – 241FJ01007 || 2026
+</footer>
+
+<!-- JS -->
+<script>
+  function showDesc(title, desc) {
+    alert(title + ":\n" + desc);
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
